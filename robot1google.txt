@@ -1,0 +1,33 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** variables ***
+
+
+*** testcase ***
+ทดสอบค้นหาคำว่า สวนสุนันทา
+    open Browser    http://www.google.com
+    Input Text    lst-ib    สวนสุนันทา
+    Click Button    btnG
+    Wait Until Page Contains    มหาวิทยาลัยราชภัฏสวนสุนันทา
+    Close Browser
+ทดสอบค้นหาคำว่า สุนันทา
+    open Browser    http://www.google.com
+    Input Text    lst-ib    สุนันทา
+    Click Button    btnG
+    Wait Until Page Contains    มหาวิทยาลัยราชภัฏสวนสุนันทา
+    Close Browser
+ทดสอบค้นหาคำว่า SSRU
+    open Browser    http://www.google.com
+    Input Text    lst-ib    SSRU
+    Click Button    btnG
+    Wait Until Page Contains    มหาวิทยาลัยราชภัฏสวนสุนันทา
+    Close Browser
+ทดสอบค้นหาคำว่า อู่ทองนอก
+    open Browser    http://www.google.com
+    Input Text    lst-ib    อู่ทองนอก
+    Click Button    btnG
+    Wait Until Page Contains    มหาวิทยาลัยราชภัฏสวนสุนันทา
+    Close Browser
+*** keywords ***
+
