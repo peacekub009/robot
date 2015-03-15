@@ -1,0 +1,24 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** variables ***
+${WEP FIZZBUZZ}    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+${Input Id}    number
+${Click Button}    btnSay
+
+*** Testcase ***
+FIZZBUZZ06
+    Open Browser    ${WEP FIZZBUZZ}
+    Wait Until Page Contains    FizzBuzz Game
+    Input Text    ${Input Id}    6
+    Click Button    ${Click Button}
+    Wait Until Page Contains    Number 6 Say Fizz
+FIZZBUZZ14
+    Open Browser    ${WEP FIZZBUZZ}
+        Wait Until Page Contains    FizzBuzz Game
+    Input Text    ${Input Id}    14
+    Click Button    ${Click Button}
+    Wait Until Page Contains    Number 14 Say 14
+
+
+*** keywords ***
